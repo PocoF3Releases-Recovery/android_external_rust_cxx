@@ -36,6 +36,7 @@ license {
 
 rust_library {
     name: "libcxx",
+    recovery_available: true,
     crate_name: "cxx",
     srcs: ["src/lib.rs"],
     edition: "2021",
@@ -79,6 +80,7 @@ rust_library {
 
 cc_library_static {
     name: "libcxxbridge05",
+    recovery_available: true,
     defaults: ["rust_static_cc_lib_defaults"],
     cflags: ["-DRUST_CXX_NO_EXCEPTIONS"],
     srcs: ["src/cxx.cc"],
